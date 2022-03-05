@@ -12,22 +12,45 @@ function handler(req, res) {
 }
 
 
-function tempo(request, response) {
+async function tempo(request, response) {
   const dynamicDate = new Date();
   const date = dynamicDate.toLocaleDateString();
   const time = dynamicDate.toLocaleTimeString();
   const dateTime = `${date} ${time}`;
   response.statusCode = 200;
 
+  const GitHubJson = await fetch('https://api.github.com/users/Gabrielfernandes87f');
 
+  const gitResponse = await GitHubJson.json();
+  const Name = gitResponse.name;
+  const github = gitResponse.html_url;
+  const Avatar = gitResponse.avatar_url;
+  const Bio = gitResponse.bio;
+  const Repos = gitResponse.public_repos;
+  const Followers = gitResponse.followers;
+  const Following = gitResponse.following;
+  const Location = gitResponse.location;
+  const Company = gitResponse.company;
+  const Blog = gitResponse.blog;
+  const Email = gitResponse.email;
   response.json({
     dateTime,
-
+    Name,
+    Avatar,
+    Bio,
+    Repos,
+    Followers,
+    Following,
+    Location,
+    Company,
+    Blog,
+    github,
+    Email,
   })
 
 }
 
-export default handler;
+export default tempo;
 
 
 
