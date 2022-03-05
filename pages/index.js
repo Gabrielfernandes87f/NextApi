@@ -3,8 +3,17 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 
+export async function getStaticProps(){
+  const github = await fetch('https://api.github.com/users/Gabrielfernandes87f')
+  const gitResponse = await github.json()
+  return{
+    props: {gitResponse}
 
-export default function Home() {
+  }
+}
+
+export default function Home({gitResponse}) {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -13,11 +22,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      
+
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Bem vindo <a href="https://next-api-liard.vercel.app/api/hello">a minha page!</a>
+          Bem vindo <a href="https://next-api-liard.vercel.app/api/hello">a minha API!</a>
         </h1>
-
+        <h2> { gitResponse.login } </h2>
+        <p className={styles.description}>
+          <img src={gitResponse.avatar_url} alt="Gabriel Fernandes" width={200} height={200}/>
+          
+        </p>
       </main>
 
       <footer className={styles.footer}>

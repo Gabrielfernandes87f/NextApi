@@ -1,18 +1,15 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 
-function handler(req, res) {
+ function handler() {
 
-  res.statusCode = 200
-  res.json({
-    name: 'Gabriel fernandes',
-    age: 34,
-    hobbies: ['fotografias', 'patins', 'codar'],
-  })
+  
+  return 10;
 }
 
 
 async function tempo(request, response) {
+  
   const dynamicDate = new Date();
   const date = dynamicDate.toLocaleDateString();
   const time = dynamicDate.toLocaleTimeString();
@@ -46,6 +43,7 @@ async function tempo(request, response) {
     Blog,
     github,
     Email,
+    request
   })
 
 }
