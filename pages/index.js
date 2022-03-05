@@ -15,7 +15,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Bem vindo <a href="https://nextjs.org">a minha page!</a>
+          Bem vindo <a href="https://next-api-liard.vercel.app/api/hello">a minha page!</a>
         </h1>
 
       </main>
