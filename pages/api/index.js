@@ -1,11 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 
- function handler() {
-
-  
-  return 10;
-}
 
 
 async function tempo(request, response) {
@@ -43,7 +38,6 @@ async function tempo(request, response) {
     Blog,
     github,
     Email,
-    request
   })
 
 }
