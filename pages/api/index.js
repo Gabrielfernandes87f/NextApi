@@ -20,7 +20,7 @@ async function api(request, response) {
   const Blog = gitResponse.blog;
   const Email = gitResponse.email;
   response.json({
-    dateTime,
+    
     Name,
     Avatar,
     Bio,
