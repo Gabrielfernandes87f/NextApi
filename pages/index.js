@@ -31,9 +31,7 @@ export default function Home({ gitResponse }) {
       </Head>
 
 
-      <h1>
-        {gitResponse.dateTime}
-      </h1>
+
       <main className="main">
         <div className="grid">
           <div className="card cardPerfil">
@@ -45,6 +43,7 @@ export default function Home({ gitResponse }) {
                   className="avatar"
                 />
               </div>
+              <div className="cardPerfilContent">
               <h2>{gitResponse.Name} </h2>
               <p className='cardP'>{gitResponse.Bio} </p>
               <p >{gitResponse.Blog} </p>
@@ -52,6 +51,7 @@ export default function Home({ gitResponse }) {
               <p>repositorios: {gitResponse.Repos} </p>
               <p>Seguidores: {gitResponse.Followers} </p>
               <p>seguindo: {gitResponse.Following} </p>
+              </div>
             </div>
           </div>
           <aside className="aside">
@@ -75,7 +75,7 @@ export default function Home({ gitResponse }) {
             </div>
             <div className="aside-content grid">
 
-              <div className="card">
+              <div className="card card1">
                 <p className='cardP'>
                   Esse é um exemplo de uma API que foi criada com Next.js.
                 </p>
@@ -86,10 +86,14 @@ export default function Home({ gitResponse }) {
               </div>
               <div className="card">
                 <p className='cardP'>
-                  Esse é um exemplo de uma API que foi criada com Next.js.
+                  O objetivo é apresentar um pouco de como utilizar uma api.
                 </p>
                 <p className='cardP'>
-                  Uma api que retorna dados de um usuario do github.
+                  Se clicar no botão, Api aqui! você será redirecionado para a api.
+                  Parace um codigo quebrado uma api, um sorftware que nao rodou corretamente.
+                  Mas se trata de dados json.
+                  Aqui eu fiz minha propria Api pegando dados da api do github e depois consumindo minha api pra colocar no meu site.
+                  Eu poderia usar logo Api do github, mas ela bloqueia acesso muito rapido a api, devido a quantidade de requisições.
                 </p>
 
               </div>
@@ -100,16 +104,14 @@ export default function Home({ gitResponse }) {
       </main>
 
       <footer className="footer">
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className="logo">
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+        <div className="footer-content">
+          <p>
+            © {new Date().getFullYear()}, Built with Next.js
+            By Gabriel Fernandes
+            {` `}
+          </p>
+        </div>
+
       </footer>
     </div>
   )
