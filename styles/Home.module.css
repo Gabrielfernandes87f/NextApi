@@ -36,7 +36,7 @@
 .title a:hover,
 .title a:focus,
 .title a:active {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .title {
@@ -113,4 +113,12 @@
     width: 100%;
     flex-direction: column;
   }
+}
+.main {
+  background-color: #fafafa !important;
+}
+#title{
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0070f3;
 }
