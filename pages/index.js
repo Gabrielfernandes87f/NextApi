@@ -36,7 +36,6 @@ export default function Home({ gitResponse }) {
       </h1>
       <main className="main">
         <div className="grid">
-<<<<<<< HEAD
           <div className="card cardPerfil">
             <div>
               <div className='card-image'>
@@ -48,7 +47,7 @@ export default function Home({ gitResponse }) {
               </div>
               <h2>{gitResponse.Name} </h2>
               <p className='cardP'>{gitResponse.Bio} </p>
-              <p>{gitResponse.Blog} </p>
+              <p >{gitResponse.Blog} </p>
               <p>{gitResponse.Email} </p>
               <p>repositorios: {gitResponse.Repos} </p>
               <p>Seguidores: {gitResponse.Followers} </p>
@@ -98,58 +97,6 @@ export default function Home({ gitResponse }) {
           </aside>
 
         </div>
-=======
-          <div className="card">
-            <div className='card-image'>
-            <img
-              src={gitResponse.Avatar}
-              alt="avatar - Gabriel Fernandes"
-              className="avatar"
-            />
-            </div>
-            <h2>{gitResponse.Name} </h2>
-            <p>{gitResponse.Bio} </p>
-            <p>{gitResponse.Blog} </p>
-            <p>{gitResponse.Email} </p>
-            <p>repositorios: {gitResponse.public_repos} </p>
-            <p>Seguidores: {gitResponse.Followers} </p>
-            <p>seguindo: {gitResponse.Following} </p>
-          </div>
-        </div>
-        <aside className="aside">
-        <h1
-          className="title"
-          id="title"
-        >
-          <a href=''
-          onClick={handleClick}
-          target="_blank">
-             Bem vindo a minha API!
-          </a>
-        </h1>
-        <div className="title">
-          <button 
-          onClick={handleClick}
-          className="button"
-          target="_blank">
-            Api aqui!
-          </button>
-
-        </div>
-          <div className="aside-content grid">
-            
-            <div className="card">
-              <p>
-                Esse é um exemplo de uma API que foi criada com Next.js.
-              </p>
-              <p>
-                Uma api que retorna dados de um usuario do github.
-              </p>
-              
-            </div>
-          </div>
-        </aside>
->>>>>>> 6d2190887c09a2151580eff768db34033a086b1b
       </main>
 
       <footer className="footer">
