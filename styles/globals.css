@@ -180,12 +180,8 @@ a {
   margin-left: 0.5rem;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
+
+
 
 #title{
   font-size: 2rem;
@@ -210,7 +206,7 @@ a {
   align-items: center;
   justify-content: center;
   flex-grow: 1;
-
+  
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
@@ -220,9 +216,23 @@ a {
   transition: color 0.15s ease, border-color 0.15s ease;
   background-color: var(--color-secundary1);
   box-shadow: #a0c1c221 2px 2px 25px 5px;
-  margin-left: 30vw;
   width: 60vw;
   height: 65vh;
-  margin-top: -68vh;
-
 }
+.cardP{
+  text-align: center;
+}
+@media (max-width: 1103px) {
+  .aside-content {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+/* @media (min-width: 700px) {
+  .cardPerfil {
+   width: 100%;
+    height: 100%;
+    .cardPerfil
+  }
+} */

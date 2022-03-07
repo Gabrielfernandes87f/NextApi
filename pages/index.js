@@ -36,56 +36,67 @@ export default function Home({ gitResponse }) {
       </h1>
       <main className="main">
         <div className="grid">
-          <div className="card">
-            <div className='card-image'>
-            <img
-              src={gitResponse.Avatar}
-              alt="avatar - Gabriel Fernandes"
-              className="avatar"
-            />
+          <div className="card cardPerfil">
+            <div>
+              <div className='card-image'>
+                <img
+                  src={gitResponse.Avatar}
+                  alt="avatar - Gabriel Fernandes"
+                  className="avatar"
+                />
+              </div>
+              <h2>{gitResponse.Name} </h2>
+              <p className='cardP'>{gitResponse.Bio} </p>
+              <p>{gitResponse.Blog} </p>
+              <p>{gitResponse.Email} </p>
+              <p>repositorios: {gitResponse.Repos} </p>
+              <p>Seguidores: {gitResponse.Followers} </p>
+              <p>seguindo: {gitResponse.Following} </p>
             </div>
-            <h2>{gitResponse.Name} </h2>
-            <p>{gitResponse.Bio} </p>
-            <p>{gitResponse.Blog} </p>
-            <p>{gitResponse.Email} </p>
-            <p>repositorios: {gitResponse.public_repos} </p>
-            <p>Seguidores: {gitResponse.Followers} </p>
-            <p>seguindo: {gitResponse.Following} </p>
           </div>
-        </div>
-        <aside className="aside">
-        <h1
-          className="title"
-          id="title"
-        >
-          <a href=''
-          onClick={handleClick}
-          target="_blank">
-             Bem vindo a minha API!
-          </a>
-        </h1>
-        <div className="title">
-          <button 
-          onClick={handleClick}
-          className="button"
-          target="_blank">
-            Api aqui!
-          </button>
+          <aside className="aside">
+            <h1
+              className="title"
+              id="title"
+            >
+              <a href=''
+                onClick={handleClick}
+                target="_blank">
+                Bem vindo a minha Api!
+              </a>
+            </h1>
+            <div className="title">
+              <button
+                onClick={handleClick}
+                className="button"
+                target="_blank">
+                Api aqui!
+              </button>
+            </div>
+            <div className="aside-content grid">
+
+              <div className="card">
+                <p className='cardP'>
+                  Esse é um exemplo de uma API que foi criada com Next.js.
+                </p>
+                <p className='cardP'>
+                  Uma api que retorna dados de um usuario do github.
+                </p>
+
+              </div>
+              <div className="card">
+                <p className='cardP'>
+                  Esse é um exemplo de uma API que foi criada com Next.js.
+                </p>
+                <p className='cardP'>
+                  Uma api que retorna dados de um usuario do github.
+                </p>
+
+              </div>
+            </div>
+          </aside>
 
         </div>
-          <div className="aside-content grid">
-            
-            <div className="card">
-              <p>
-                Esse é um exemplo de uma API que foi criada com Next.js.
-              </p>
-              <p>
-                Uma api que retorna dados de um usuario do github.
-              </p>
-              
-            </div>
-          </div>
-        </aside>
       </main>
 
       <footer className="footer">
