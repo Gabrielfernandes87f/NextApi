@@ -4,7 +4,7 @@ import '../styles/Home.module.css'
 
 
 export async function getStaticProps() {
-  const github = await fetch('https://next-api-liard.vercel.app/api')
+  const github = await fetch('https://api.github.com/users/Gabrielfernandes87f')
   const gitResponse = await github.json()
   return {
     props: { gitResponse }
@@ -38,19 +38,19 @@ export default function Home({ gitResponse }) {
             <div>
               <div className='card-image'>
                 <img
-                  src={gitResponse.Avatar}
+                  src={gitResponse.avatar_url}
                   alt="avatar - Gabriel Fernandes"
                   className="avatar"
                 />
               </div>
               <div className="cardPerfilContent">
-              <h2>{gitResponse.Name} </h2>
-              <p className='cardP'>{gitResponse.Bio} </p>
+              <h2>{gitResponse.name} </h2>
+              <p className='cardP'>{gitResponse.bio} </p>
               <p >{gitResponse.Blog} </p>
-              <p>{gitResponse.Email} </p>
-              <p>repositorios: {gitResponse.Repos} </p>
-              <p>Seguidores: {gitResponse.Followers} </p>
-              <p>seguindo: {gitResponse.Following} </p>
+              <p>{gitResponse.email} </p>
+              <p>repositorios: {gitResponse.public_repos} </p>
+              <p>Seguidores: {gitResponse.followers} </p>
+              <p>seguindo: {gitResponse.following} </p>
               </div>
             </div>
           </div>
