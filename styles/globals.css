@@ -159,7 +159,7 @@ a {
 .card:hover,
 .card:focus,
 .card:active {
-  color: ;
+  color: var(--color-secundary2);
   border-color: var(--color-primary3);
 
 }
